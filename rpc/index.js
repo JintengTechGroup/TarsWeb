@@ -14,13 +14,14 @@
  * specific language governing permissions and limitations under the License.
  */
 
-const client  = require("@tars/rpc/protal.js").Communicator.New();
+const client  = require("@tars/rpc/protal.js").client;
 
 const AdminRegProxy = require("./proxy/AdminRegProxy");
 const ConfigFProxy = require("./proxy/ConfigFProxy");
 const DCacheOptProxy = require("./proxy/DCacheOptProxy");
 const MonitorQueryProxy = require("./proxy/MonitorQueryProxy");
 const PatchProxy = require("./proxy/PatchProxy");
+const TopologyProxy = require("./topology/TopologyProxy");
 const WebConf = require("../config/webConf");
 
 const { RPCClientPrx } = require('./service');
@@ -31,15 +32,18 @@ module.exports = {
     // RPCClientPrx,
 
     patchPrx : RPCClientPrx(client, PatchProxy, 'tars', 'Patch', 'tars.tarspatch.PatchObj'),
-    
+
 	adminRegPrx : RPCClientPrx(client, AdminRegProxy, 'tars', 'AdminReg', 'tars.tarsAdminRegistry.AdminRegObj'),
 
     configFPrx : RPCClientPrx(client, ConfigFProxy, 'tars', 'Config', 'tars.tarsconfig.ConfigObj'),
 
     statQueryPrx : RPCClientPrx(client, MonitorQueryProxy, 'tars', 'MonitorQuery', 'tars.tarsquerystat.QueryObj'),
     propertyQueryPrx : RPCClientPrx(client, MonitorQueryProxy, 'tars', 'MonitorQuery', 'tars.tarsqueryproperty.QueryObj'),
-    
+
     DCacheOptPrx: RPCClientPrx(client, DCacheOptProxy, 'DCache', 'DCacheOpt', 'DCache.DCacheOptServer.DCacheOptObj'),
-	
+
+    topologyPrx: RPCClientPrx(client, TopologyProxy,  WebConf.TopologyObj.moduleName, WebConf.TopologyObj.interfaceName, WebConf.TopologyObj.servantName),
+
     client: client,
+
 };

@@ -1,10 +1,11 @@
 {
     "name": "Tars-Web",
-    "version": "2.4.18",
+    "version": "2.4.19",
     "private": true,
     "scripts": {
         "start": "node bin/www",
         "startc": "./node_modules/.bin/nodemon bin/www",
+        "local": "cross-env NODE_ENV=local ./node_modules/.bin/nodemon bin/www",
         "dev": "cross-env NODE_ENV=dev ./node_modules/.bin/nodemon bin/www",
         "k8s": "cross-env NODE_ENV=k8s ./node_modules/.bin/nodemon bin/www",
         "kdev": "cross-env NODE_ENV=kdev ./node_modules/.bin/nodemon bin/www",
@@ -57,7 +58,6 @@
         "node-schedule": "^1.3.0",
         "node-ssh": "^5.1.1",
         "node-xlsx": "^0.16.1",
-        "pm2": "^4.5.5",
         "q": "^1.5.1",
         "request": "^2.87.0",
         "request-promise": "^4.2.6",
