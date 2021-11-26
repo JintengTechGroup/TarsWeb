@@ -118,7 +118,6 @@ CREATE TABLE `t_gateway_obj` (
 
 -- Dump completed on 2020-06-20 17:02:14
 
-
 DROP TABLE IF EXISTS `t_tars_test_case`;
 CREATE TABLE `t_tars_test_case` (
   `case_id` int(11) NOT NULL AUTO_INCREMENT,

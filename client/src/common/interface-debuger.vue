@@ -158,7 +158,7 @@
                 </let-form-item>
             </let-form>
 
-            <let-table :data="testCaseList" :title="$t('inf.title.testCaseList')" :empty-msg="$t('common.nodata')">
+            <let-table :data="testCaseList" :title="$t('operate.testCaseList')" :empty-msg="$t('common.nodata')">
                 <let-table-column :title="$t('inf.dlg.testCastName')" prop="test_case_name" width="100px"></let-table-column>
                 <let-table-column :title="$t('inf.dlg.objName')" prop="object_name" width="100px"></let-table-column>
                 <let-table-column :title="$t('inf.dlg.fileName')" prop="file_name" width="100px"></let-table-column>
@@ -713,8 +713,7 @@ export default {
                     obj_endpoint[tmp_data.servant]=tmp_data.endpoint;
                 }
                 //去到adapter信息  向特定节点请求服务
-                this.$ajax
-                    .postJSON("/server/api/interface_test", {
+                this.$ajax.postJSON("/server/api/interface_test", {
                         id: this.selectedId,
                         application: this.serverData.application,
                         server_name: this.serverData.server_name,

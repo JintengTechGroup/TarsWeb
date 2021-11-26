@@ -377,10 +377,10 @@ InfTestService.testBencmark = async(runParams)=>{
 
 
 /**
- * @name getTarsFile 获取解析后的tars文件记录
+ * @name getTestCase 获取测试用例
  * @param {Object} params 
  * @param {Array} fields
- * @returns {Object} 插入的记录 
+ * @returns {Object} 测试用例 
  */
 InfTestService.getTestCase = async (params, fields) => {
 	return await TestCaseDao.getTestCase(params, fields);

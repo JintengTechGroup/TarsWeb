@@ -427,5 +427,4 @@ InfTestController.modifyTestCase = async (ctx) => {
 	}
 }
 
-
 module.exports = InfTestController;

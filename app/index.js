@@ -422,7 +422,6 @@ if (WebConf.enable) {
 		['get', '/get_testcase_list', InfTestController.getTestCaseList, { f_id: 'notEmpty' }],
 		['get', '/delete_test_case', InfTestController.deleteTestCase, { case_id: 'notEmpty' }],
 		['post', '/modify_test_case', InfTestController.modifyTestCase, { case_id: 'notEmpty', test_case_name: 'notEmpty', params: 'notEmpty' }],
-
 		//taflogview
 		['get', '/logview_list', LogviewController.getLogFileList, {application: 'notEmpty', server_name: 'notEmpty', node_name: 'notEmpty'}],
 		['get', '/logview_data', LogviewController.getLogData, {
