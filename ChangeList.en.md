@@ -1,9 +1,11 @@
-## 20211115(2.4.21)
-- Add K8S Events to view.
-- Node management supports batch editing of common labels and affinity labels
-- Add the tars. Es template,notify,events ES to read from the template
-- Add K8S supports normal service maintenance
-- Add Node Details
+## 20211124(2.4.21)
+
+- add k8s events pages
+- k8s node manage support batch edit tag and affinity tag
+- k8s add tars.es template,notify,events es read from this template
+- k8s support normal server
+- k8s add node description
+- fix gateway fetchUpstreams function error
 
 ## 20211115(2.4.20)
 
