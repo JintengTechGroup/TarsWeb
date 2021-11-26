@@ -163,7 +163,7 @@ if (conf.isEnableK8s() && fs.existsSync('/mnt/config/config.json')) {
         conf.client = '/mnt/config/tars.conf';
         conf.enable = content.enable;
         conf.show = content.show;
-
+        
     } catch (e) {
         console.log(e);
     }
